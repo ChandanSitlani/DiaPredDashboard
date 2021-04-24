@@ -4,11 +4,11 @@ from pyramid.response import Response
 
 import os
 
-import pandas
+import pandas as pd
 
 from catboost import CatBoostClassifier
 
-d=pandas.read_csv("diabetes_data_upload (1).csv")
+d=pd.read_csv("diabetes_data_upload (1).csv")
 print(len(d.iloc[0]))
 def hello_world(request):
     print('Incoming request')
