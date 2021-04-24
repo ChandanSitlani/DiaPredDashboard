@@ -26,15 +26,9 @@ y["class"]=d["class"]
 d.pop("class")
 y["class"], _=y["class"].factorize()
 y["class"]=1-y["class"]
-explainer = ClassifierExplainer(
-                model, d, y,
-                labels=["Negative","Positive"]
-                )
 
-db = ExplainerDashboard(explainer, title="Diabetes Dashboard",
-                    shap_dependence=False,
-                    shap_interaction=False,
-                    decision_trees=False)
+
+db = ExplainerDashboard.from_config("dashboard.yaml")
 def dashboard(request):
     return db.app.index()
 
