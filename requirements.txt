@@ -4,3 +4,4 @@ waitress
 pyramid
 explainerdashboard
 numba==0.51.2
+llvmlite==0.31.0
