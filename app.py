@@ -41,8 +41,6 @@ if __name__ == '__main__':
     
     with Configurator() as config:
         config.add_route('hello', '/')
-        config.add_view(hello_world, route_name='hello')
-        config.add_route('predict', '/predict')
-        config.add_view(predict, route_name='predict')
+        config.add_view(dashboard, route_name='hello')
         app = config.make_wsgi_app()
     serve(app, host='0.0.0.0', port=port)
