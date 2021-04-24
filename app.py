@@ -31,7 +31,7 @@ explainer = ClassifierExplainer(
                 labels=["Negative","Positive"]
                 )
 
-db = ExplainerDashboard(explainer, title="Diabetes Explainer",
+db = ExplainerDashboard(explainer, title="Diabetes Dashboard",
                     shap_dependence=False,
                     shap_interaction=False,
                     decision_trees=False)
